@@ -1,5 +1,34 @@
-<mat-card class="standardCard">
+<!-- <mat-card style = "background-color: cadetblue; color: beige; margin: 10px; padding: 10px;">
     <mat-card-header>
-        <mat-card-title>{{rooms.price}}</mat-card-title>
+        <mat-card-title>{{rooms.title}}</mat-card-title>
+        
     </mat-card-header>
-</mat-card>
+    <section>
+        <p>Preis: {{rooms.price}} pro Nacht </p>
+        <p>Room Type: {{rooms.roomType}}</p>
+    </section>
+</mat-card> -->
+<!-- Container für alle Zimmer -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+  <mat-card style="background-color: cadetblue; color: beige; width: 300px; padding: 10px;">
+    
+    <mat-card-header style="display: flex; align-items: center;">
+      <!-- Platzhalterbild -->
+      <img mat-card-avatar
+           src="https://thumbs.dreamstime.com/b/santo-domingohotelzimmer-43642330.jpg"
+           alt="Zimmerbild"
+           style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover; margin-right: 15px;">
+      <mat-card-title>{{rooms.title}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p><strong>Preis:</strong> {{ rooms.price }} € pro Nacht</p>
+      <p><strong>Typ:</strong> {{ rooms.roomType }}</p>
+      <p><strong>Größe:</strong> {{ rooms.size }} m²</p>
+      <p><strong>Max. Gäste:</strong> {{ rooms.maxGuests }}</p>
+      <p><strong>View:</strong> {{ rooms.view }}</p>
+    </mat-card-content>
+  </mat-card>
+</div> 
+<!-- Ende des Containers für alle Zimmer --> 
+ 
