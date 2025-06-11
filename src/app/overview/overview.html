@@ -1,5 +1,12 @@
-<mat-card class="standardCard">
+<div class="rooms-overview">
+  <mat-card class="standardCard">
     <mat-card-header>
-        <mat-card-title>{{rooms.price}}</mat-card-title>
+      <mat-card-title>{{ rooms.title }}</mat-card-title>
+      <mat-card-subtitle>Preis: {{ rooms.price | currency:'EUR' }}</mat-card-subtitle>
     </mat-card-header>
-</mat-card>
+    <mat-card-content>
+      <p><strong>Betten:</strong> {{ rooms.numberOfBeds }}</p>
+      <p><strong>Beschreibung:</strong> {{ rooms.price }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

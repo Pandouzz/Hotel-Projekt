@@ -6,7 +6,8 @@ export interface Room {
     size: number;
     view: ViewType;
     price: number;
-    maxGuests: number;
+    numberOfBeds: number;
+    description: string;
     
     //Ausstattung
     wifi: boolean;
