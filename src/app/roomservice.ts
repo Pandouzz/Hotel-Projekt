@@ -9,164 +9,140 @@ export class Roomservice {
 
   constructor() { 
     this.rooms = [
-        // Einzelzimmer - Budget
       {
-          title: 'Einzelzimmer Standard',
+          title: 'Einzelzimmer Basic',
           roomNumber: 101,
           roomType: RoomType.SINGLE,
           size: 18,
           view: ViewType.CITY_VIEW,
           price: 85,
-          maxGuests: 1,
+          numberOfBeds: 1,
           wifi: true,
           airConditioning: false,
           tv: true,
           minibar: false,
-          balcony: false
+          balcony: false,
+          description: 'Ein gemütliches Einzelzimmer mit Blick auf die Stadt. Ideal für Geschäftsreisende oder Alleinreisende.'
       },
-
-      // Einzelzimmer - Premium
       {
-          title: 'Einzelzimmer Premium',
-          roomNumber: 205,
-          roomType: RoomType.SINGLE,
-          size: 22,
-          view: ViewType.SEA_VIEW,
-          price: 120,
-          maxGuests: 1,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: true,
-          balcony: true
-      },
-
-      // Doppelzimmer - Standard
-      {
-          title: 'Doppelzimmer Standard',
-          roomNumber: 302,
-          roomType: RoomType.DOUBLE,
-          size: 28,
-          view: ViewType.GARDEN_VIEW,
-          price: 140,
-          maxGuests: 2,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: false,
-          balcony: false
-      },
-
-      // Doppelzimmer - Meerblick
-      {
-          title: 'Doppelzimmer Meerblick',
-          roomNumber: 401,
-          roomType: RoomType.DOUBLE,
-          size: 32,
-          view: ViewType.SEA_VIEW,
-          price: 180,
-          maxGuests: 2,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: true,
-          balcony: true
-      },
-
-      // Doppelzimmer - Stadtblick
-      {
-          title: 'Doppelzimmer Stadtblick',
-          roomNumber: 315,
-          roomType: RoomType.DOUBLE,
-          size: 30,
-          view: ViewType.CITY_VIEW,
-          price: 160,
-          maxGuests: 2,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: true,
-          balcony: false
-      },
-
-      // Suite - Gartenblick
-      {
-          title: 'Suite Gartenblick',
-          roomNumber: 501,
-          roomType: RoomType.SUITE,
-          size: 45,
-          view: ViewType.GARDEN_VIEW,
-          price: 280,
-          maxGuests: 4,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: true,
-          balcony: true
-      },
-
-      // Suite - Premium Meerblick
-      {
-          title: 'Suite Premium',
-          roomNumber: 601,
-          roomType: RoomType.SUITE,
-          size: 55,
-          view: ViewType.SEA_VIEW,
-          price: 350,
-          maxGuests: 4,
-          wifi: true,
-          airConditioning: true,
-          tv: true,
-          minibar: true,
-          balcony: true
-      },
-
-      // Einzelzimmer - Gartenblick
-      {
-          title: 'Einzelzimmer Gartenblick',
+          title: 'Einzelzimmer Comfort',
           roomNumber: 203,
           roomType: RoomType.SINGLE,
           size: 20,
           view: ViewType.GARDEN_VIEW,
           price: 95,
-          maxGuests: 1,
+          numberOfBeds: 1,
           wifi: true,
           airConditioning: true,
           tv: true,
           minibar: false,
-          balcony: false
+          balcony: false,
+          description: 'Ruhiges Einzelzimmer mit Blick in den Garten, ideal für Erholungssuchende.'
       },
-
-      // Doppelzimmer - Budget ohne Klimaanlage
       {
-          title: 'Doppelzimmer Standard',
-          roomNumber: 102,
-          roomType: RoomType.DOUBLE,
-          size: 26,
-          view: ViewType.CITY_VIEW,
-          price: 110,
-          maxGuests: 2,
+          title: 'Einzelzimmer Deluxe',
+          roomNumber: 205,
+          roomType: RoomType.SINGLE,
+          size: 25,
+          view: ViewType.SEA_VIEW,
+          price: 120,
+          numberOfBeds: 1,
           wifi: true,
-          airConditioning: false,
+          airConditioning: true,
+          tv: true,
+          minibar: true,
+          balcony: true,
+          description: 'Ein elegantes Einzelzimmer mit Meerblick. Perfekt für einen entspannten Aufenthalt am Strand.'
+      },
+      {
+          title: 'Doppelzimmer Basic',
+          roomNumber: 302,
+          roomType: RoomType.DOUBLE,
+          size: 28,
+          view: ViewType.GARDEN_VIEW,
+          price: 140,
+          numberOfBeds: 2,
+          wifi: true,
+          airConditioning: true,
           tv: true,
           minibar: false,
-          balcony: false
+          balcony: false,
+          description: 'Komfortables Doppelzimmer mit Blick in den Garten, perfekt für Paare.'
       },
-
-      // Suite - Stadtblick
+    {
+          title: 'Doppelzimmer Comfort',
+          roomNumber: 315,
+          roomType: RoomType.DOUBLE,
+          size: 30,
+          view: ViewType.CITY_VIEW,
+          price: 160,
+          numberOfBeds: 2,
+          wifi: true,
+          airConditioning: true,
+          tv: true,
+          minibar: true,
+          balcony: false,
+          description: 'Doppelzimmer mit Blick auf die Stadt, inklusive Minibar und Klimaanlage.'
+      },
       {
-          title: 'Suite Stadtblick',
+          title: 'Doppelzimmer Deluxe',
+          roomNumber: 401,
+          roomType: RoomType.DOUBLE,
+          size: 32,
+          view: ViewType.SEA_VIEW,
+          price: 180,
+          numberOfBeds: 2,
+          wifi: true,
+          airConditioning: true,
+          tv: true,
+          minibar: true,
+          balcony: true,
+          description: 'Modernes Doppelzimmer mit herrlichem Meerblick, Balkon und Minibar.'
+      },
+      {
+          title: 'Suite Basic',
+          roomNumber: 501,
+          roomType: RoomType.SUITE,
+          size: 45,
+          view: ViewType.GARDEN_VIEW,
+          price: 280,
+          numberOfBeds: 4,
+          wifi: true,
+          airConditioning: true,
+          tv: true,
+          minibar: true,
+          balcony: true,
+          description: 'Großzügige Suite mit Gartenblick, Balkon und Platz für die ganze Familie.'
+      },
+      {
+          title: 'Suite Comfort',
           roomNumber: 502,
           roomType: RoomType.SUITE,
           size: 48,
           view: ViewType.CITY_VIEW,
           price: 300,
-          maxGuests: 4,
+          numberOfBeds: 4,
           wifi: true,
           airConditioning: true,
           tv: true,
           minibar: true,
-          balcony: true
+          balcony: true,
+          description: 'Elegante Suite mit Blick auf die Stadt, großem Balkon und viel Komfort.'
+      },
+      {
+          title: 'Suite Deluxe',
+          roomNumber: 601,
+          roomType: RoomType.SUITE,
+          size: 55,
+          view: ViewType.SEA_VIEW,
+          price: 350,
+          numberOfBeds: 4,
+          wifi: true,
+          airConditioning: true,
+          tv: true,
+          minibar: true,
+          balcony: true,
+          description: 'Luxuriöse Suite mit Meerblick, großem Balkon und exklusiver Ausstattung.'
       }
     ]
   }
