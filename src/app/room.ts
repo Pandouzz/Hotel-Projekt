@@ -8,6 +8,7 @@ export interface Room {
     price: number;
     numberOfBeds: number;
     description: string;
+    photo: string;
     
     //Ausstattung
     wifi: boolean;
