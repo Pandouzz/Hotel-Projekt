@@ -1,2 +1,5 @@
 <h1>Adlon Hotel</h1>
-<p>Das ist das beste Hotel der Welt!</p>
+
+@for (item of rooms; track $index){
+    <app-overview [rooms]="item"></app-overview>
+}
