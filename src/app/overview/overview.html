@@ -1,11 +1,10 @@
-<mat-card class="standardCard">
-  <mat-card-header>
-    <mat-card-title>{{ rooms.title }}</mat-card-title>
-    <mat-card-subtitle>Preis: {{ rooms.price | currency:'EUR' }}</mat-card-subtitle>
-  </mat-card-header>
-  <img [src]="rooms.photo">
-  <p>{{rooms.photo}}</p>
-  <mat-card-actions>
-    <a mat-button [routerLink] = "['/details', rooms.roomNumber]">Details</a>
-    </mat-card-actions>
-</mat-card>
+<div class="room-detail-content">
+  <div class="room-detail-text">
+    <h2>{{ rooms.title }}</h2>
+    <p>{{ rooms.description }}</p>
+    <a class="room-detail-btn" [routerLink]="['/details', rooms.roomNumber]">Zimmer ansehen</a>
+  </div>
+  <div class="room-detail-image">
+    <img [src]="rooms.photo" [alt]="rooms.title" />
+  </div>
+</div>

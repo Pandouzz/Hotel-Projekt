@@ -1,0 +1,9 @@
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.2rem;       /* Passe die Größe bei Bedarf an */
+  letter-spacing: 0.12em;  /* Für mehr Abstand zwischen den Buchstaben */
+  color: #111;
+  margin: 0;
+  line-height: 1.1;
+}

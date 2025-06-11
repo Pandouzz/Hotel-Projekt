@@ -1,0 +1,9 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 gleich breite Spalten */
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: stretch; /* Karten füllen die Spalte komplett */
+  align-items: stretch;   /* Karten werden gleichmäßig in der Zeile gestreckt */
+}

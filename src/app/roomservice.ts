@@ -39,7 +39,7 @@ export class Roomservice {
           minibar: false,
           balcony: false,
           description: 'Ruhiges Einzelzimmer mit Blick in den Garten, ideal für Erholungssuchende.',
-          photo: 'assets/images/einzelzimmer_comfort.jpg'
+          photo: 'einzelzimmer_comfort.jpg'
       },
       {
           title: 'Einzelzimmer Deluxe',
@@ -55,7 +55,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Ein elegantes Einzelzimmer mit Meerblick. Perfekt für einen entspannten Aufenthalt am Strand.',
-          photo: 'assets/images/einzelzimmer_deluxe.jpg'
+          photo: 'einzelzimmer_deluxe.jpg'
       },
       {
           title: 'Doppelzimmer Basic',
@@ -71,7 +71,7 @@ export class Roomservice {
           minibar: false,
           balcony: false,
           description: 'Komfortables Doppelzimmer mit Blick in den Garten, perfekt für Paare.',
-          photo: 'assets/images/doppelzimmer_basic.jpg'
+          photo: 'doppelzimmer_basic.jpg'
       },
     {
           title: 'Doppelzimmer Comfort',
@@ -87,7 +87,7 @@ export class Roomservice {
           minibar: true,
           balcony: false,
           description: 'Doppelzimmer mit Blick auf die Stadt, inklusive Minibar und Klimaanlage.',
-          photo: 'assets/images/doppelzimmer_comfort.jpg'
+          photo: 'doppelzimmer_comfort.jpg'
       },
       {
           title: 'Doppelzimmer Deluxe',
@@ -103,7 +103,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Modernes Doppelzimmer mit herrlichem Meerblick, Balkon und Minibar.',
-          photo: './assets/images/doppelzimmer_deluxe.jpg'
+          photo: 'doppelzimmer_deluxe.jpg'
       },
       {
           title: 'Suite Basic',
@@ -119,7 +119,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Großzügige Suite mit Gartenblick, Balkon und Platz für die ganze Familie.',
-          photo: 'assets/images/suite_basic.jpg'
+          photo: 'suite_basic.jpg'
       },
       {
           title: 'Suite Comfort',
@@ -135,7 +135,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Elegante Suite mit Blick auf die Stadt, großem Balkon und viel Komfort.',
-          photo: 'assets/images/suite_comfort.jpg'
+          photo: 'suite_comfort.jpg'
       },
       {
           title: 'Suite Deluxe',
@@ -151,7 +151,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Luxuriöse Suite mit Meerblick, großem Balkon und exklusiver Ausstattung.',
-          photo: 'assets/images/suite_deluxe.jpg'
+          photo: 'suite_deluxe.jpg'
       }
     ]
   }
