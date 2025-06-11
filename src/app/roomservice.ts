@@ -159,4 +159,8 @@ export class Roomservice {
   getRooms(): Room[]{
     return this.rooms;
   }
+
+  getRoomByNumber(roomNumber: number): Room | undefined {
+    return this.rooms.find(room => room.roomNumber === roomNumber);
+}
 }
