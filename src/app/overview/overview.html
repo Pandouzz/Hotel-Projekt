@@ -15,7 +15,7 @@
     <mat-card-header style="display: flex; align-items: center;">
       <!-- Platzhalterbild -->
       <img mat-card-avatar
-           src="https://thumbs.dreamstime.com/b/santo-domingohotelzimmer-43642330.jpg"
+           [src] = "rooms.photo"
            alt="Zimmerbild"
            style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover; margin-right: 15px;">
       <mat-card-title>{{rooms.title}}</mat-card-title>
@@ -25,8 +25,13 @@
       <p><strong>Preis:</strong> {{ rooms.price }} € pro Nacht</p>
       <p><strong>Typ:</strong> {{ rooms.roomType }}</p>
       <p><strong>Größe:</strong> {{ rooms.size }} m²</p>
-      <p><strong>Max. Gäste:</strong> {{ rooms.maxGuests }}</p>
+      <p><strong>Max. Gäste:</strong> {{ rooms.numberOfBeds }}</p>
       <p><strong>View:</strong> {{ rooms.view }}</p>
+      <a 
+            style="color: beige;" [routerLink] = "['/details', rooms.roomNumber]"
+            >
+                More Infos
+            </a>
     </mat-card-content>
   </mat-card>
 </div> 
