@@ -23,14 +23,14 @@ export class Roomservice {
           minibar: false,
           balcony: false,
           description: 'Ein gemütliches Einzelzimmer mit Blick auf die Stadt. Ideal für Geschäftsreisende oder Alleinreisende.',
-          photo: 'assets/images/einzelzimmer_basic.jpg'
+          photo: 'einzelzimmer_basic.jpg'
       },
       {
           title: 'Einzelzimmer Comfort',
           roomNumber: 203,
           roomType: RoomType.SINGLE,
           size: 20,
-          view: ViewType.GARDEN_VIEW,
+          view: ViewType.GARDEN_VIEW,   
           price: 95,
           numberOfBeds: 1,
           wifi: true,
@@ -103,7 +103,7 @@ export class Roomservice {
           minibar: true,
           balcony: true,
           description: 'Modernes Doppelzimmer mit herrlichem Meerblick, Balkon und Minibar.',
-          photo: 'assets/images/doppelzimmer_deluxe.jpg'
+          photo: './assets/images/doppelzimmer_deluxe.jpg'
       },
       {
           title: 'Suite Basic',

@@ -19,6 +19,6 @@ export class Details {
   roomService: Roomservice = inject(Roomservice);
 
   constructor() {
-    this.selectedRoom = this.roomService.getRoomByNumber(Number(this.route.snapshot.paramMap.get('roomNumber')));
+    this.selectedRoom = this.roomService.getRoomByNumber(Number(this.route.snapshot.params['roomNumber']));
   }
 }

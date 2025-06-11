@@ -18,7 +18,7 @@ export const routes: Routes = [
         component: Details
     },
     {
-        path: '/booking/:roomNumber',
+        path: 'booking/:roomNumber',
         component: Booking
     }
 ]
