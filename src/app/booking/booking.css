@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400&display=swap');
 /* Schriftarten passend zu deinem Projekt */
 form.booking-form {
   font-family: 'Montserrat', Arial, sans-serif;
@@ -70,5 +71,104 @@ form.booking-form {
   }
   .booking-form button[type="submit"] {
     font-size: 1.1rem;
+  }
+}
+
+
+.booking-hero {
+  width: 100vw;
+  height: 500px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.booking-hero-img {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.booking-content {
+  background: #fff;
+  text-align: center;
+  padding: 60px 8vw 30px 8vw;
+}
+
+.booking-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+  letter-spacing: .06em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.booking-subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #7d7d7d;
+  font-size: 1.15rem;
+  margin-bottom: 36px;
+  margin-top: 0;
+}
+
+.booking-description {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.07rem;
+  color: #1a1a1a;
+  max-width: 600px;
+  margin: 0 auto 36px auto;
+  line-height: 1.7;
+  text-align: center;
+}
+.booking-description p {
+  margin: 10px 0;
+}
+.booking-description strong {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.07em;
+  font-size: 1em;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 38px;
+}
+
+.booking-actions button[mat-button], 
+.booking-actions button[mat-raised-button] {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.07rem;
+  border-radius: 4px;
+  padding: 9px 28px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Playfair Display';
+}
+
+@media (max-width: 900px) {
+  .booking-hero,
+  .booking-hero-img {
+    height: 180px;
+  }
+  .booking-content {
+    padding: 26px 3vw 18px 3vw;
+  }
+  .booking-title {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+  .booking-actions {
+    gap: 10px;
+    margin-top: 18px;
   }
 }
