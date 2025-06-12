@@ -17,7 +17,8 @@ form.booking-form {
 .booking-form input[type="text"],
 .booking-form input[type="email"],
 .booking-form input[type="tel"],
-.booking-form input[type="date"] {
+.booking-form input[type="date"],
+.booking-form input[type="anzPersonen"] {
   flex: 1 1 220px;
   padding: 12px 14px;
   font-size: 1rem;
