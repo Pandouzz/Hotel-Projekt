@@ -105,7 +105,7 @@ export class Roomservice {
         description: 'Modernes Doppelzimmer mit herrlichem Meerblick, Balkon und Minibar.',
         photo: 'doppelzimmer_deluxe.jpg'
       },
-            {
+      {
         title: 'Einzelzimmer Basic',
         roomNumber: 101,
         roomType: RoomType.SINGLE,
@@ -162,5 +162,13 @@ export class Roomservice {
 
   getRoomByNumber(roomNumber: number): Room | undefined {
     return this.rooms.find(room => room.roomNumber === roomNumber);
+  }
+
+  getRoomByName(name: string): Room[] {
+    if(name.length === 0) {
+      return this.getRooms();
+    }
+    return this.getRooms().filter((room) =>
+      room.title.toLowerCase() === name.toLocaleLowerCase());
   }
 }

@@ -1,9 +1,46 @@
 .card-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 gleich breite Spalten */
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   width: 100%;
   margin: 0 auto;
-  justify-items: stretch; /* Karten füllen die Spalte komplett */
-  align-items: stretch;   /* Karten werden gleichmäßig in der Zeile gestreckt */
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.search-section {
+  display: flex;
+  margin: 2em 0 1em 0;
+}
+
+.search-box {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 1.5em 2em;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(60, 80, 120, 0.08);
+}
+
+.search-input {
+  min-width: 260px;
+  padding: 0.7em 1em;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.search-input:focus {
+  border: 1.5px solid #1976d2;
+}
+
+.search-btn {
+  min-width: 120px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }

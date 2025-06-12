@@ -18,4 +18,8 @@ export class Home {
   constructor(){
     this.rooms = this.roomService.getRooms();
   }
+
+  getRoomByName(name: string){
+    this.rooms = this.roomService.getRoomByName(name);
+  }
 }

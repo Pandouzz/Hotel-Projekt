@@ -1,5 +1,16 @@
+<section class="filter container search-section">
+  <div class="search-box">
+    <input type="text" placeholder="Nach Zimmern suchen" class="search-input" #roomSearchInput/>
+    <button mat-flat-button color="primary" class="search-btn" (click)="getRoomByName(roomSearchInput.value)">
+      <span class="material-icons" style="vertical-align: middle;">search</span>
+      Suchen
+    </button>
+  </div>
+</section>
+
+
 <div class="card-container">
     @for (item of rooms; track $index){
-        <app-overview [rooms]="item"></app-overview>
+    <app-overview [rooms]="item"></app-overview>
     }
 </div>
