@@ -1,0 +1,74 @@
+/* Schriftarten passend zu deinem Projekt */
+form.booking-form {
+  font-family: 'Montserrat', Arial, sans-serif;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 30px 24px;
+  background-color: #f0f8fa; /* sanfter Hintergrund */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.booking-form input[type="vorname"],
+.booking-form input[type="nachname"],
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="date"] {
+  flex: 1 1 220px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid cadetblue;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+  color: #1a1a1a;
+}
+
+.booking-form input::placeholder {
+  color: #7d7d7d;
+  font-style: italic;
+}
+
+.booking-form input:focus {
+  border-color: #5f9ea0; /* etwas dunkleres CadetBlue */
+  box-shadow: 0 0 6px #5f9ea0aa;
+}
+
+.booking-form button[type="submit"] {
+  flex: 1 1 100%;
+  background-color: cadetblue;
+  color: beige;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: #5f9ea0;
+}
+
+/* Responsive Anpassung für kleinere Bildschirme */
+@media (max-width: 500px) {
+  form.booking-form {
+    padding: 20px 16px;
+  }
+  .booking-form input[type="text"],
+  .booking-form input[type="email"],
+  .booking-form input[type="tel"],
+  .booking-form input[type="date"] {
+    flex: 1 1 100%;
+  }
+  .booking-form button[type="submit"] {
+    font-size: 1.1rem;
+  }
+}

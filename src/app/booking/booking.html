@@ -1,1 +1,20 @@
-<p>booking works!</p>
+<!-- 
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <input formControlName="firstName" placeholder="Vorname">
+  <input formControlName="lastName" placeholder="Nachname">
+  <input formControlName="email" placeholder="E-Mail">
+  <input formControlName="phoneNumber" placeholder="Telefonnummer">
+  <input formControlName="checkInDate" type="date" placeholder="Check-In">
+  <input formControlName="checkOutDate" type="date" placeholder="Check-Out">
+  <button type="submit">Buchen</button>
+</form>
+ -->
+<form class="booking-form" [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <input formControlName="firstName" type="vorname" placeholder="Vorname">
+  <input formControlName="lastName" type="nachname" placeholder="Nachname">
+  <input formControlName="email" type="email" placeholder="E-Mail">
+  <input formControlName="phoneNumber" type="tel" placeholder="Telefonnummer">
+  <input formControlName="checkInDate" type="date" placeholder="Check-In">
+  <input formControlName="checkOutDate" type="date" placeholder="Check-Out">
+  <button type="submit">Buchen</button>
+</form>
