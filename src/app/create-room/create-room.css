@@ -1,0 +1,39 @@
+.create-room-section {
+  max-width: 800px;
+  margin: 2em auto;
+  background: #f8fafc;
+  border-radius: 1.2em;
+  box-shadow: 0 4px 24px rgba(60, 80, 120, 0.10);
+  padding: 2em 2.5em;
+}
+
+.create-room-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-row {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin: 1em 0 0.5em 0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}

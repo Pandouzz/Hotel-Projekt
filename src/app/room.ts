@@ -19,13 +19,13 @@ export interface Room {
 }
 
 export enum RoomType {
-    SINGLE = 'single',
-    DOUBLE = 'double',
-    SUITE = 'suite'
+    SINGLE = 'Single',
+    DOUBLE = 'Double',
+    SUITE = 'Suite'
 }
 
 export enum ViewType {
-    SEA_VIEW = 'sea_view',
-    CITY_VIEW = 'city_view',
-    GARDEN_VIEW = 'garden_view'
+    SEA_VIEW = 'Meerblick',
+    CITY_VIEW = 'Stadtblick',
+    GARDEN_VIEW = 'Gartenblick'
 }

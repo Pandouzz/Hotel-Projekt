@@ -171,4 +171,8 @@ export class Roomservice {
     return this.getRooms().filter((room) =>
       room.title.toLowerCase() === name.toLocaleLowerCase());
   }
+
+  addRoom(room: Room): void {
+    this.rooms.push(room);
+  }
 }

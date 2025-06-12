@@ -22,6 +22,15 @@
   box-shadow: 0 2px 12px rgba(60, 80, 120, 0.08);
 }
 
+.create-box {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 1.5em 2em;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(60, 80, 120, 0.08);
+}
+
 .search-input {
   min-width: 260px;
   padding: 0.7em 1em;
@@ -43,4 +52,27 @@
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.create-room {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.create-room button {
+  background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8em 2em;
+  border-radius: 0.7em;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.create-room button:hover {
+  background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
 }
