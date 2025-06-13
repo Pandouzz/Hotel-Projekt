@@ -11,7 +11,7 @@
     <div class="container">
         <div class="search-container">
             <div class="search-box">
-                <input type="text" placeholder="Nach Zimmern suchen" class="search-input" #roomSearchInput />
+                <input type="text" placeholder="Nach Zimmern suchen" class="search-input" #roomSearchInput #suche (keydown.enter) ="getRoomByName(roomSearchInput.value)" />
                 <button mat-button class="search-btn" (click)="getRoomByName(roomSearchInput.value)">
                     <span class="material-icons">search</span>
                     Suchen
