@@ -19,7 +19,7 @@
   </div>
     <div class="detail-subtitle">Preis: {{ selectedRoom?.price | currency:'EUR' }}</div>
   <div class="detail-actions">
-    <button mat-button color="basic" [routerLink]="['/home']">Zurück</button>
+    <button mat-button color="basic" [routerLink]="['/allrooms']">Zurück</button>
     <button mat-raised-button color="primary" [routerLink]="['/booking', selectedRoom?.roomNumber]">Jetzt buchen</button>
   </div>
 </section>
