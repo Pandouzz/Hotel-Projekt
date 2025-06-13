@@ -1,0 +1,40 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f1f1;
+  color: #fff;
+  padding: 1em 2em;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+
+.navbar-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2em;
+}
+
+.navbar-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+
+.navbar-links a.active-link,
+.navbar-links a:hover {
+  color: #b4b4b4;
+}
