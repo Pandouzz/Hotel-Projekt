@@ -17,6 +17,6 @@
   <input formControlName="anzPersonen" type="anzPersonen" placeholder="Anzahl der Gäste">
   <div class="booking-actions">
     <button class="booking-actions button" mat-button color="basic" [routerLink]="['/home']">Zurück</button>
-    <button class="booking-actions button" mat-raised-button color="primary">Buchen</button>
+    <button class="booking-actions button" mat-raised-button color="primary" [routerLink]="['/bookingapproval', selectedRoom?.roomNumber]"> Buchen</button>
   </div>
 </form>

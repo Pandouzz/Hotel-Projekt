@@ -1,0 +1,14 @@
+<div class="booking-hero">
+  <!--<img class="booking-hero-img" [src]="'/assets/' + selectedRoom?.photo" [alt]="selectedRoom?.title">-->
+  <img class="booking-hero-img" [src]="selectedRoom?.photo" [alt]="selectedRoom?.title">
+</div>
+<section class="booking-content">
+  <h1 class="booking-title">{{ selectedRoom?.title }}</h1>
+  <h2 style="margin-top:2em;">{{ selectedRoom?.description }}</h2>
+</section>
+
+<section class="booking-content">
+  <h2>Ihre Buchung wurde erfolgreich angefragt!</h2>
+  <p>Wir werden Ihre Anfrage so schnell wie möglich bearbeiten und Ihnen eine Bestätigung zukommen lassen.</p>
+  <p>Vielen Dank für Ihre Buchung!</p>
+</section>
