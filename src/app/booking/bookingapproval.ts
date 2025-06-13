@@ -18,7 +18,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-booking',
-  imports: [],
+  imports: [ReactiveFormsModule, MatInputModule, MatSelectModule, MatCardModule, MatButtonModule, CommonModule, FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './bookingapproval.html',
   styleUrl: './booking.css'
 })

@@ -2,13 +2,16 @@
   <!--<img class="booking-hero-img" [src]="'/assets/' + selectedRoom?.photo" [alt]="selectedRoom?.title">-->
   <img class="booking-hero-img" [src]="selectedRoom?.photo" [alt]="selectedRoom?.title">
 </div>
-<section class="booking-content">
-  <h1 class="booking-title">{{ selectedRoom?.title }}</h1>
-  <h2 style="margin-top:2em;">{{ selectedRoom?.description }}</h2>
-</section>
+
 
 <section class="booking-content">
-  <h2>Ihre Buchung wurde erfolgreich angefragt!</h2>
-  <p>Wir werden Ihre Anfrage so schnell wie möglich bearbeiten und Ihnen eine Bestätigung zukommen lassen.</p>
-  <p>Vielen Dank für Ihre Buchung!</p>
+    <h1 class="booking-title"> Ihre Buchung wurde erfolgreich angefragt!</h1>
+    <h2 class="booking-subtitle"><strong> Wir haben Ihre Buchung für das Zimmer {{ selectedRoom?.title }} erfolgreich erhalten.</strong> </h2>
+    <p class="booking-content"><strong>Wir werden Ihre Anfrage so schnell wie möglich bearbeiten und Ihnen eine Bestätigung zukommen lassen.</strong>  </p>
+    <p class="booking-content">Falls Sie innerhalb von 2 Werktagen nichts von uns hören, schreiben Sie uns eine Mail an 'amareon&#64;kundensupport.com'</p>
+    <p class="booking-content">Vielen Dank für Ihre Buchung!</p>
+    <div class="booking-actions">
+       <button class="booking-actions button"  mat-raised-button color="primary" [routerLink]="['/home']">Zurück zur Startseite</button> 
+    </div>
+    
 </section>
