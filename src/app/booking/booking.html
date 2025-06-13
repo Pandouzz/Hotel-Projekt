@@ -14,5 +14,9 @@
   <input formControlName="phoneNumber" type="tel" placeholder="Telefonnummer">
   <input formControlName="checkInDate" type="date" placeholder="Check-In">
   <input formControlName="checkOutDate" type="date" placeholder="Check-Out">
-  <button type="submit">Buchen</button>
+  <input formControlName="anzPersonen" type="anzPersonen" placeholder="Anzahl der Gäste">
+  <div class="booking-actions">
+    <button class="booking-actions button" mat-button color="basic" [routerLink]="['/home']">Zurück</button>
+    <button class="booking-actions button" mat-raised-button color="primary" [routerLink]="['/bookingapproval', selectedRoom?.roomNumber]"> Buchen</button>
+  </div>
 </form>

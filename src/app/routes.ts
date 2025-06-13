@@ -6,6 +6,7 @@ import { CreateRoom } from './create-room/create-room';
 import { Allrooms } from './roomsite/allrooms';
 import { Impressum } from './impressum/impressum';
 import { Aboutus } from './aboutus/aboutus';
+import { Bookingapproval } from './booking/bookingapproval';
 
 export const routes: Routes = [
     {
@@ -33,6 +34,11 @@ export const routes: Routes = [
         path: 'create-room',
         component: CreateRoom
     },
+        {
+        path: 'bookingapproval/:roomNumber',
+        component: Bookingapproval
+    },
+
     {
         path: 'impressum',
         component: Impressum

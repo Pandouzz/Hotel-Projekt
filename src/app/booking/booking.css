@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400&display=swap');
 /* Schriftarten passend zu deinem Projekt */
+:root {
+  --primary: #1976d2;
+  --primary-dark: #115293;
+  --primary-light: #63a4ff;
+  --primary-verylight: #e3f2fd;
+  --primary-contrast: #fff;
+}
 form.booking-form {
   font-family: 'Montserrat', Arial, sans-serif;
   max-width: 480px;
   margin: 40px auto;
   padding: 30px 24px;
-  background-color: #f0f8fa; /* sanfter Hintergrund */
+  background-color:  #e3f2fd;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+  border: 2px solid  #63a4ff;
 }
 .booking-form input[type="vorname"],
 .booking-form input[type="nachname"],
 .booking-form input[type="text"],
 .booking-form input[type="email"],
 .booking-form input[type="tel"],
-.booking-form input[type="date"] {
+.booking-form input[type="date"],
+.booking-form input[type="anzPersonen"] {
   flex: 1 1 220px;
   padding: 12px 14px;
   font-size: 1rem;
-  border: 2px solid cadetblue;
+  border: 2px solid  #63a4ff;
   border-radius: 6px;
   transition: border-color 0.3s ease;
   outline-offset: 2px;
@@ -34,14 +43,15 @@ form.booking-form {
 }
 
 .booking-form input:focus {
-  border-color: #5f9ea0; /* etwas dunkleres CadetBlue */
-  box-shadow: 0 0 6px #5f9ea0aa;
+  border-color: #1976d2;
+  box-shadow: 0 0 6px  #63a4ff;
 }
 
 .booking-form button[type="submit"] {
   flex: 1 1 100%;
-  background-color: cadetblue;
-  color: beige;
+  background-color:  #1976d2;
+  color: #fff;
+  transition: background-color 0.3s;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.25rem;
@@ -55,7 +65,7 @@ form.booking-form {
 }
 
 .booking-form button[type="submit"]:hover {
-  background-color: #5f9ea0;
+  background-color:  #115293;
 }
 
 /* Responsive Anpassung für kleinere Bildschirme */
@@ -149,6 +159,7 @@ form.booking-form {
   padding: 9px 28px;
   letter-spacing: .11em;
   text-transform: uppercase;
+  background-color:  #fff;
 }
 
 h2 {
