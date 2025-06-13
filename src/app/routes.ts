@@ -3,6 +3,9 @@ import { Home } from "./home/home";
 import { Details } from './details/details';
 import { Booking } from './booking/booking';
 import { CreateRoom } from './create-room/create-room';
+import { Allrooms } from './roomsite/allrooms';
+import { Impressum } from './impressum/impressum';
+import { Aboutus } from './aboutus/aboutus';
 
 export const routes: Routes = [
     {
@@ -15,6 +18,10 @@ export const routes: Routes = [
         component: Home
     },
     {
+        path: 'allrooms',
+        component: Allrooms
+    },
+    {
         path: 'details/:roomNumber',
         component: Details
     },
@@ -25,5 +32,13 @@ export const routes: Routes = [
     {
         path: 'create-room',
         component: CreateRoom
+    },
+    {
+        path: 'impressum',
+        component: Impressum
+    },
+    {
+        path: 'aboutus',
+        component: Aboutus,
     }
 ]

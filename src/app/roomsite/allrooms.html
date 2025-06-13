@@ -1,0 +1,32 @@
+<section class="header-section">
+    <div class="container">
+        <div class="header-content">
+            <h1>Zimmerübersicht</h1>
+            <p class="subtitle">Entdecken Sie unsere exklusiven Räumlichkeiten</p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Nach Zimmern suchen" class="search-input" #roomSearchInput />
+                <button mat-button class="search-btn" (click)="getRoomByName(roomSearchInput.value)">
+                    <span class="material-icons">search</span>
+                    Suchen
+                </button>
+            </div>
+            
+            <div class="create-room">
+                <button mat-button [routerLink]="['/create-room']">Neues Zimmer anlegen</button>
+            </div>
+        </div>
+
+        <div class="room-grid">
+            @for (item of rooms; track $index){
+                <app-overview [rooms]="item"></app-overview>
+            }
+        </div>
+    </div>
+</section>

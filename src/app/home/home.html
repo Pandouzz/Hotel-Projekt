@@ -1,21 +1,42 @@
-<section class="filter container search-section">
-    <div class="search-box">
-        <input type="text" placeholder="Nach Zimmern suchen" class="search-input" #roomSearchInput />
-        <button mat-flat-button color="primary" class="search-btn" (click)="getRoomByName(roomSearchInput.value)">
-            <span class="material-icons" style="vertical-align: middle;">search</span>
-            Suchen
-        </button>
+<div class="hero-section">
+    <img src='hotel_overview.jpg' class="hero-image"/>
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Willkommen zu AMAREON</h1>
+            <p>Ihr Luxushotel für unvergessliche Momente</p>
+            <button mat-raised-button color="primary" [routerLink]="['/allrooms']">
+                Unsere Zimmer entdecken
+            </button>
+        </div>
     </div>
+    <div class="scroll-indicator">
+        <span class="material-icons">keyboard_arrow_down</span>
+    </div>
+</div>
 
-    <div class="create-box">
-        <div class="create-room">
-            <button mat-button [routerLink]="['/create-room']" color="primary">Neues Zimmer anlegen</button>
+<section class="content-section">
+    <div class="container">
+        <h2>Über uns</h2>
+        <p>Das AMAREON Hotel bietet Ihnen erstklassigen Service und luxuriösen Komfort. Genießen Sie unsere exquisiten
+            Zimmer mit atemberaubendem Ausblick und modernster Ausstattung.</p>
+
+        <h2>Unsere Leistungen</h2>
+        <div class="features">
+            <div class="feature">
+                <span class="material-icons">restaurant</span>
+                <h3>Restaurant</h3>
+                <p>Genießen Sie kulinarische Köstlichkeiten in unserem Feinschmecker-Restaurant.</p>
+            </div>
+            <div class="feature">
+                <span class="material-icons">spa</span>
+                <h3>Wellness</h3>
+                <p>Entspannen Sie in unserem Wellnessbereich mit Sauna und Massage-Angeboten.</p>
+            </div>
+            <div class="feature">
+                <span class="material-icons">pool</span>
+                <h3>Pool</h3>
+                <p>Erfrischen Sie sich in unserem Innen- und Außenpool.</p>
+            </div>
         </div>
     </div>
 </section>
-
-<div class="card-container">
-    @for (item of rooms; track $index){
-    <app-overview [rooms]="item"></app-overview>
-    }
-</div>

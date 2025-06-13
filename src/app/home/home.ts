@@ -1,26 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { Overview } from "../overview/overview";
-import { Room } from '../room';
-import { Roomservice } from '../roomservice';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, MatButtonModule, Overview, RouterLink],
+  imports: [MatCardModule, MatButtonModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home {
-  rooms: Room [] = [];
-  roomService: Roomservice = inject(Roomservice);
-
-  constructor(){
-    this.rooms = this.roomService.getRooms();
-  }
-
-  getRoomByName(name: string){
-    this.rooms = this.roomService.getRoomByName(name);
-  }
 }

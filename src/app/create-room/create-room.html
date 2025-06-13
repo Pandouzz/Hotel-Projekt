@@ -1,64 +1,77 @@
-<section class="create-room-section">
-    <form [formGroup]="roomForm" class="create-room-form">
-        <div class="form-row">
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Zimmername</mat-label>
-                <input matInput id="title" formControlName="title" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Zimmernummer</mat-label>
-                <input matInput id="roomNumber" formControlName="roomNumber" required>
-            </mat-form-field>
+<section class="header-section">
+    <div class="container">
+        <div class="header-content">
+            <h1>Neues Zimmer anlegen</h1>
+            <p class="subtitle">Erfassen Sie alle Details für ein neues Zimmer</p>
         </div>
-        <div class="form-row">
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Zimmertyp</mat-label>
-                <mat-select [(value)]='selectedRoomType' required>
-                    @for (roomType of roomTypes; track $index) {
-                    <mat-option [value]="roomType">{{roomType}}</mat-option>
-                    }
-                </mat-select>
-            </mat-form-field>
+    </div>
+</section>
 
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Größe (m²)</mat-label>
-                <input matInput id="size" formControlName="size" type="number">
-            </mat-form-field>
+<section class="content-section">
+    <div class="container">
+        <div class="form-container">
+            <form [formGroup]="roomForm" class="create-room-form">
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Zimmername</mat-label>
+                        <input matInput id="title" formControlName="title" required>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Zimmernummer</mat-label>
+                        <input matInput id="roomNumber" formControlName="roomNumber" required>
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Zimmertyp</mat-label>
+                        <mat-select [(value)]='selectedRoomType' required>
+                            @for (roomType of roomTypes; track $index) {
+                            <mat-option [value]="roomType">{{roomType}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Größe (m²)</mat-label>
+                        <input matInput id="size" formControlName="size" type="number">
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Aussicht</mat-label>
+                        <mat-select [(value)]='selectedView'>
+                            @for (view of viewTypes; track $index) {
+                            <mat-option [value]="view">{{view}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Anzahl der Betten</mat-label>
+                        <input matInput id="numberOfBeds" formControlName="numberOfBeds" type="number">
+                    </mat-form-field>
+                </div>
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Beschreibung</mat-label>
+                        <input matInput id="description" formControlName="description" type="text">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Preis</mat-label>
+                        <input matInput id="price" formControlName="price" type="number">
+                    </mat-form-field>
+                </div>
+                <div class="checkbox-group">
+                    <mat-checkbox formControlName="wifi">WLAN</mat-checkbox>
+                    <mat-checkbox formControlName="airConditioning">Klimaanlage</mat-checkbox>
+                    <mat-checkbox formControlName="tv">TV</mat-checkbox>
+                    <mat-checkbox formControlName="minibar">Minibar</mat-checkbox>
+                    <mat-checkbox formControlName="balcony">Balkon</mat-checkbox>
+                </div>
+                <div class="form-actions">
+                    <a mat-button [routerLink]="['/allrooms']">Zurück</a>
+                    <button mat-button [routerLink]="['/allrooms']" (click)="saveNewRoom()">Speichern</button>
+                </div>
+            </form>
         </div>
-        <div class="form-row">
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Aussicht</mat-label>
-                <mat-select [(value)]='selectedView'>
-                    @for (view of viewTypes; track $index) {
-                    <mat-option [value]="view">{{view}}</mat-option>
-                    }
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Anzahl der Betten</mat-label>
-                <input matInput id="numberOfBeds" formControlName="numberOfBeds" type="number">
-            </mat-form-field>
-        </div>
-        <div class="form-row">
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Beschreibung</mat-label>
-                <input matInput id="description" formControlName="description" type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Preis</mat-label>
-                <input matInput id="price" formControlName="price" type="number">
-            </mat-form-field>
-        </div>
-        <div class="checkbox-group">
-            <mat-checkbox formControlName="wifi">WLAN</mat-checkbox>
-            <mat-checkbox formControlName="airConditioning">Klimaanlage</mat-checkbox>
-            <mat-checkbox formControlName="tv">TV</mat-checkbox>
-            <mat-checkbox formControlName="minibar">Minibar</mat-checkbox>
-            <mat-checkbox formControlName="balcony">Balkon</mat-checkbox>
-        </div>
-        <div class="form-actions">
-            <a mat-button [routerLink]="['/home']">Back</a>
-            <button mat-raised-button [routerLink]="['/home']" color="primary" (click)="saveNewRoom() ">Save</button>
-        </div>
-    </form>
+    </div>
 </section>
